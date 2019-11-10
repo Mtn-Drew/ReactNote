@@ -1,0 +1,74 @@
+.AddNote {
+  --AddNote-height: 220px;
+  background-color: #010d1e;
+  color: #cacaca;
+  height: var(--AddNote-height);
+  margin-bottom: 8px;
+  max-width: 380px;
+  padding: 8px 0 8px 8px;
+  position: relative;
+}
+
+form {
+  border: 1px solid white;
+  margin-left: 100px;
+  z-index: 100;
+}
+
+input {
+  margin-left: 20px;
+  width: 200px;
+}
+
+.noteNameInput {
+  margin-left : 20px;
+}
+
+.AddNote__button {
+  --AddNote-button-height: 32px;
+  background-color: #041a3a;
+  border: 1 solid white;
+  color: #bdbcbc;
+  font-size: 12px;
+  height: var(--AddNote-button-height);
+  width: calc(var(--AddNote-height));
+  margin-top: 25px;
+  margin-left: 70px;
+}
+.AddNote__button:hover {
+  background-color: #bd0909;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.AddNote__title {
+  font-family: var(--custom-font);
+  font-size: 20px;
+  margin: 0;
+  max-width: 80%;
+  min-height: 24px;
+}
+.AddNote__title a {
+  color: #cacaca;
+  display: block;
+  text-decoration: none;
+}
+.AddNote__title a:hover {
+  color: #FFB72F;
+}
+
+.AddNote__dates {
+  bottom: 8px;
+  color: #a7a5a5;
+  font-size: 14px;
+  position: absolute;
+}
+
+.noteContentInput {
+  margin-left: 50px;
+}
+
+.folderSelection {
+  margin-left: 5px;
+}
