@@ -16,30 +16,27 @@ export default class NoteListMain extends React.Component {
   static contextType = ApiContext
 
   render() {
+    console.log('in notelistMain')
     const { folderId } = this.props.match.params
-    const { notes=[] } = this.context
+    const { notes = [] } = this.context
     const notesForFolder = getNotesForFolder(notes, folderId)
     return (
-      <section className='NoteListMain'>
+      <section className="NoteListMain">
         <ul>
-          {notesForFolder.map(note =>
+          {notesForFolder.map(note => (
             <li key={note.id}>
-              <Note
-                id={note.id}
-                name={note.name}
-                modified={note.modified}
-              />
+              <Note id={note.id} name={note.name} modified={note.modified} />
             </li>
-          )}
+          ))}
         </ul>
-        <div className='NoteListMain__button-container'>
+        <div className="NoteListMain__button-container">
           <CircleButton
             tag={Link}
-            to='/add-note'
-            type='button'
-            className='NoteListMain__add-note-button'
+            to="/add-note"
+            type="button"
+            className="NoteListMain__add-note-button"
           >
-            <FontAwesomeIcon icon='plus' />
+            <FontAwesomeIcon icon="plus" />
             <br />
             Note
           </CircleButton>
